@@ -41,6 +41,19 @@ cite {
   li {
     &.post-quote {
       @extend %flush-top;
+      blockquote {
+        border-left: 4px solid $primary-color;
+        color: $grey;
+        font-family: "ff-tisa-web-pro";
+        font-size: emCalc(24);
+        font-style: italic;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+        cite {
+          color: $light-grey;
+          font-size: emCalc(10);
+        }
+      }
     }
     &.post-photo {
       @extend %flush-top;
@@ -84,20 +97,6 @@ cite {
       // }
     }
 
-
-    blockquote {
-      border-left: 4px solid $primary-color;
-      color: $grey;
-      font-family: "ff-tisa-web-pro";
-      font-size: emCalc(24);
-      font-style: italic;
-      padding-top: 1.25em;
-      padding-bottom: 1.25em;
-      cite {
-        color: $light-grey;
-        font-size: emCalc(10);
-      }
-    }
     .photo {
       font-size: emCalc(24);
       margin-bottom: 1.25em;
