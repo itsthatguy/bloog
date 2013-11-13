@@ -65,7 +65,7 @@ cite {
     .post {
       @include grid-row;
       overflow-x: hidden;
-      // background: rgba($white, 0.95);
+      background: $white;
       font-size: emCalc(14);
       padding-bottom: 1.25em;
       padding-top: 1.25em;
@@ -80,9 +80,9 @@ cite {
         font-size: emCalc(12);
         font-weight: 600;
         text-transform: uppercase;
-        border-bottom: 1px solid rgba($primary-color, .3);
+        border-top: 1px solid rgba($primary-color, .3);
         margin: 0;
-        padding: 0 0 2.5em 0;
+        margin: 0 0 2.5em 0;
       }
       ul,ol { margin-left: 0; }
     }
