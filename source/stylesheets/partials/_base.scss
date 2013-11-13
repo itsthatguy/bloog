@@ -43,15 +43,16 @@ cite {
       @extend %flush-top;
 
       blockquote {
-        border-left: 4px solid $primary-color;
-        color: $grey;
+        background: $primary-color;
+        color: $white;
         font-family: "ff-tisa-web-pro";
         font-size: emCalc(24);
         font-style: italic;
         padding-top: 1.25em;
         padding-bottom: 1.25em;
+        margin-bottom: 0;
         cite {
-          color: $light-grey;
+          color: $off-white;
           font-size: emCalc(10);
         }
       }
@@ -67,12 +68,14 @@ cite {
       overflow-x: hidden;
       background: $white;
       font-size: emCalc(14);
-      padding-bottom: 1.25em;
       padding-top: 1.25em;
-      padding-left: 1.25em;
-      padding-right: 1.25em;
       margin-bottom: 2.5em;
-      .content { margin: 0; }
+      .content {
+        margin: 0;
+        margin-left: 1.25em;
+        margin-right: 1.25em;
+        margin-bottom: 1.25em;
+      }
 
       .footer {
         color: $light-grey;
@@ -80,9 +83,12 @@ cite {
         font-size: emCalc(12);
         font-weight: 600;
         text-transform: uppercase;
-        border-top: 1px solid rgba($primary-color, .3);
+        border-top: 1px solid $off-white;
         margin: 0;
-        margin: 0 0 2.5em 0;
+        padding-top: 2.25em;
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+        padding-bottom: 2.25em;
       }
       ul,ol { margin-left: 0; }
     }
