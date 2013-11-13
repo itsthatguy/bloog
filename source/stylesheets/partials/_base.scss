@@ -41,6 +41,7 @@ cite {
   li {
     &.post-quote {
       @extend %flush-top;
+
       blockquote {
         border-left: 4px solid $primary-color;
         color: $grey;
