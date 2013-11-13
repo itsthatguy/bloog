@@ -46,5 +46,6 @@ TumblrThemr is made by [Icelab](http://icelab.com.au/) and [Jim Whimpey](http://
 * [jQuery](http://jquery.com/)
 * [Sammy.js](http://sammyjs.org/)
 * [Handlebars.js](https://github.com/wycats/handlebars.js)
+* [tumblr-theme-base-haml](https://github.com/jenmyers/tumblr-theme-base-haml)
 
 The `demo.tumblr` theme is a straight-up conversion of the [Redux theme](http://www.tumblr.com/theme/433) by [Jacob Bijani](http://jacobbijani.com/)
