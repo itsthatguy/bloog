@@ -1,0 +1,44 @@
+{block:tumblrThemr}
+  <link rel="stylesheet" href="/stylesheets/site.css">
+  <style type="text/css">{CustomCSS}</style>
+
+
+    <script="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+
+  <h1>{Title}</h1>
+
+  {block:Description}
+    <p id="description">{Description}</p>
+  {/block:Description}
+
+  <ol id="posts">
+    {block:Posts}
+
+    <%= partial "/posts/text" %>
+    <%= partial "/posts/photo" %>
+    <%= partial "/posts/photoset" %>
+    <%= partial "/posts/quote" %>
+    <%= partial "/posts/link" %>
+    <%= partial "/posts/chat" %>
+    <%= partial "/posts/video"  %>
+    <%= partial "/posts/audio" %>
+
+    {/block:Posts}
+  </ol>
+
+  <p id="footer">
+
+    {block:PreviousPage}
+      <a class="link" href="{PreviousPage}"> &#171; Previous</a>
+    {/block:PreviousPage}
+
+    {block:NextPage}
+      <a class="link" href="{NextPage}"> Next &#187;</a>
+    {/block:NextPage}
+
+    <a class="link" href="/archive"> Archive</a>
+  </p>
+{/block:tumblrThemr}

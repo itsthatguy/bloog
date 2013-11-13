@@ -1,0 +1,9 @@
+{block:Photo}
+%li.post-photo
+  .row
+    .small-12.columns
+      %img(src="{PhotoURL-500}" alt="{PhotoAlt}")
+      {block:Caption}
+      %div.caption {Caption}
+      {/block:Caption}
+{/block:Photo}

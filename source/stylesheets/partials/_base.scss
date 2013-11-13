@@ -2,3 +2,16 @@ html { height: 100%; }
 
 body { min-height: 100%; }
 
+* { @include text-shadow(none); }
+
+#posts {
+  li {
+    display: block;
+    // padding-bottom: 1em;
+    // margin-bottom: 1em;
+    > div {
+      background: $white;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+  }
+}

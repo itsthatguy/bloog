@@ -1,0 +1,10 @@
+{block:Text}
+%li.post-text
+  .row
+    .small-12.columns
+      {block:Title}
+      %h3
+        %a{ :href => "{Permalink}" } {Title}
+      {/block:Title}
+      {Body}
+{/block:Text}

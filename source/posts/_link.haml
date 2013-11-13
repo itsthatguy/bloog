@@ -1,0 +1,9 @@
+{block:Link}
+%li.post-link
+  .row
+    .small-12.columns
+      %a.link{ :href => "{URL}", :target => "{Target}" } {Name}
+      {block:Description}
+      %div.description {Description}
+      {/block:Description}
+{/block:Link}
