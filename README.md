@@ -1,0 +1,1 @@
+# Middleman Blog starting point
