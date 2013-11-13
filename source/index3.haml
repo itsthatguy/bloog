@@ -1,0 +1,140 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => "utf-8" }
+
+    %link{:rel => "shortcut icon", :href => "{Favicon}"}
+    %link{:rel => "alternate", :type => "application/rss+xml", :href => "{RSS}"}
+    %script{:type => "text/javascript", :src  => "http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"}
+    :javascript
+      $(document).ready(function(){
+        var html = $('body').html();
+        html = html.replace(/{block:\w*}/g, "")
+        $('body').html(html.replace(/{\/block:\w*}/g, ""));
+      });
+  %title
+    {title}
+
+  :plain
+    \ {block:Description}
+
+    \ {/block:Description}
+
+  %body
+    %h1 {Title}
+    \ {block:Description}
+    %p
+      {Description}
+    \ {/block:Description}
+
+    %ol#posts
+      \ {block:Posts}
+      \ {block:Text}
+      %li.post.text
+        \ {block:Title}
+        %h3
+          %a{:href => "{Permalink}"}
+            {Title}
+        \ {/block:Title}
+
+        {Body}
+      \ {/block:Text}
+
+      \ {block:Photo}
+      %li.post.photo
+        %img{:src => "{PhotoURL-500}", :alt =>"{PhotoAlt}" }
+        \ {block:Caption}
+        .caption
+          {Caption}
+        \ {/block:Caption}
+      \ {/block:Photo}
+
+      \ {block:Photoset}
+      %li.post.photoset
+        {Photoset-500}
+
+        \ {block:Caption}
+        .caption
+          {Caption}
+        \ {/block:Caption}
+      \ {/block:Photoset}
+
+      \ {block:Quote}
+      %li.post.quote
+        "{Quote}"
+
+        \ {block:Caption}
+        .caption
+          {Caption}
+        \ {/block:Caption}
+
+        \ {block:Source}
+        .source
+          {Source}
+        \ {/block:Source}
+      \ {/block:Quote}
+
+      \ {block:Link}
+      %li.post.link
+        %a.link{:href => "URL", :target => "{Target}"}
+          {Name}
+        \ {block:Description}
+        .description
+          {Description}
+        \ {/block:Description}
+      \ {/block:Link}
+
+      \ {block:Chat}
+      %li.post.chat
+        \ {block:Title}
+        %h3
+          %a{:href => "{Permalink}"}
+            {Title}
+        \ {/block:Title}
+
+        %ul.chat
+          \ {block:Lines}
+          %li{:class => "{Alt} user_{UserNumber}"}
+            \ {block:Label}
+            %span{:class => "label"}
+              {Label}
+            \ {/block:Label}
+
+            {Line}
+        \ {/block:Lines}
+      \ {/block:Chat}
+
+      \ {block:Video}
+      %li.post.video
+        {Video-500}
+
+        \ {block:Caption}
+        .caption
+          {Caption}
+        \ {/block:Caption}
+      \ {/block:Video}
+
+      \ {block:Audio}
+      %li.post.audio
+        {AudioPlayerBlack}
+
+        \ {block:Caption}
+        .caption
+          {Caption}
+        \ {/block:Caption}
+      \ {/block:Audio}
+    \ {/block:Posts}
+
+    %p#footer
+      \ {block:PreviousPage}
+      %a{:href => "{PreviousPage}"}
+        « Previous
+      \ {/block:PreviousPage}
+
+      \ {block:NextPage}
+      %a{:href => "{NextPage}"}
+        Next «
+      \ {/block:NextPage}
+
+      %a{:href => "{/archive}"}
+        Archive

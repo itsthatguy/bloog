@@ -1,0 +1,343 @@
+!!!
+%html
+  %head
+    %script{async: "", src: "http://edge.quantserve.com/quant.js", type: "text/javascript"}
+    %script{src: "//www.google-analytics.com/ga.js"}
+    :javascript
+      var __pbpa = true;
+    :javascript
+      var translated_warning_string = 'Warning: Never enter your Tumblr password unless \&#x201C;https://www.tumblr.com/login\&#x201D;\x0ais the address in your web browser.\x0a\x0aYou should also see a green \&#x201C;Tumblr, Inc.\&#x201D; identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\&#x2019;s blog.\x0a\x0aAre you absolutely sure you want to continue?';
+    %script{language: "javascript", src: "http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=4e09fe74b282f245aeafcf8a701d8e5f", type: "text/javascript"}
+    %meta{content: "", name: "text:Google Analytics ID"}
+    %meta{content: "A bare-bones Tumblr boilerplate for theme development.", name: "description"}
+    %meta{charset: "utf-8"}
+    %meta{content: "initial-scale=1.0, width=device-width", name: "viewport"}
+    %title Essential Theme
+    %link{href: "http://25.media.tumblr.com/avatar_9db81d0aa6c3_128.png", rel: "shortcut icon"}
+    %link{href: "http://essentialtheme.tumblr.com/rss", rel: "alternate", type: "application/rss+xml"}
+    %link{href: "http://static.tumblr.com/wgijwsy/k1Hm9ei8b/normalize.css", rel: "stylesheet", type: "text/css"}
+
+    / BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS
+    / If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML.
+    / Read more: http://ogp.me/
+    %meta{content: "48119224995", property: "fb:app_id"}
+    %meta{content: "Essential Theme", property: "og:title"}
+    %meta{content: "http://essentialtheme.tumblr.com/?og=1", property: "og:url"}
+    %meta{content: "A bare-bones Tumblr boilerplate for theme development.", property: "og:description"}
+    %meta{content: "tumblr-feed:tumblelog", property: "og:type"}
+    %meta{content: "http://25.media.tumblr.com/avatar_9db81d0aa6c3_128.png", property: "og:image"}
+    / END TUMBLR FACEBOOK OPENGRAPH TAGS
+    / TWITTER TAGS
+    %meta{charset: "utf-8"}
+    %meta{content: "tumblr", name: "twitter:site"}
+    %meta{content: "summary", name: "twitter:card"}
+    %meta{content: "essentialtheme", name: "twitter:title"}
+    %meta{content: "A bare-bones Tumblr boilerplate for theme development.", name: "twitter:description"}
+    %meta{content: "Tumblr", name: "twitter:app:name:iphone"}
+    %meta{content: "Tumblr", name: "twitter:app:name:ipad"}
+    %meta{content: "Tumblr", name: "twitter:app:name:googleplay"}
+    %meta{content: "305343404", name: "twitter:app:id:iphone"}
+    %meta{content: "305343404", name: "twitter:app:id:ipad"}
+    %meta{content: "com.tumblr", name: "twitter:app:id:googleplay"}
+    %meta{content: "tumblr://x-callback-url/blog?blogName=essentialtheme&referrer=twitter-cards", name: "twitter:app:url:iphone"}
+    %meta{content: "tumblr://x-callback-url/blog?blogName=essentialtheme&referrer=twitter-cards", name: "twitter:app:url:ipad"}
+    %meta{content: "tumblr://x-callback-url/blog?blogName=essentialtheme&referrer=twitter-cards", name: "twitter:app:url:googleplay"}
+    %script{src: "http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=533ebd188e00469d8e95597acd0d32f6", type: "text/javascript"}
+    %style#tumblr_teaser_follow_css{type: "text/css"}
+      :cdata
+        \#tumblr_teaser_follow {
+        display: block;
+        opacity: 1;
+        visibility: hidden;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        width: 1px;
+        height: 1px;
+        z-index: 2147483647;
+        }
+        \#tumblr_teaser_follow.open {
+        visibility: visible;
+        width: 310px;
+        height: 110px;
+        }
+    %style#tumblr_iframe_css{type: "text/css"}
+      :cdata
+        \#tumblr_controls {
+        display: block;
+        opacity: 1;
+        visibility: hidden;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 177px;
+        height: 26px;
+        z-index: 2147483647;
+        }
+        \#tumblr_controls.visible {
+        visibility: visible;
+        }
+        \.tumblr_mobile_banner {
+        position: relative;
+        }
+        html.tumblr_mobile_banner body iframe#tumblr_controls.visible.tumblr_sticky_iframe {
+        position: absolute !important;
+        visibility: visible !important;
+        top: 0 !important;
+        opacity: 1 !important;
+        }
+        \.tumblr_mobile_banner #tumblr_controls {
+        position: absolute !important;
+        visibility: visible !important;
+        top: 0 !important;
+        \-webkit-transform: translateY(-100%);
+        \-moz-transform: translateY(-100%);
+        \-ms-transform: translateY(-100%);
+        \-o-transform: translateY(-100%);
+        transform: translateY(-100%);
+        \-webkit-transition: -webkit-transform 0.2s ease-out;
+        \-moz-transition: -moz-transform 0.2s ease-out;
+        \-ms-transition: -ms-transform 0.2s ease-out;
+        \-o-transition: -o-transform 0.2s ease-out;
+        transition: transform 0.2s ease-out;
+        }
+        \.tumblr_mobile_banner #tumblr_controls.visible {
+        \-webkit-transform: none;
+        \-moz-transform: none;
+        \-ms-transform: none;
+        \-o-transform: none;
+        transform: none;
+        }
+    %meta{content: "off", "http-equiv" => "x-dns-prefetch-control"}
+    %meta{content: "mathematics,math,conversation,culture,art", name: "keywords"}
+  %body
+    %header#masthead
+      / Details: portrait, title and description
+      #site_name
+        %img{src: "http://25.media.tumblr.com/avatar_9db81d0aa6c3_128.png"}
+        %h1
+          %a{href: "/", title: "Home"} Essential Theme
+        %p A bare-bones Tumblr boilerplate for theme development.
+      / Navigation
+      %nav
+        %ul
+          %li
+            %a{href: "/code"} Get the code!
+      / Search form
+      %form{action: "/search", method: "get"}
+        %input{name: "q", type: "text", value: ""}
+        %input{type: "submit", value: "Search"}
+    / Content holder
+    #content
+      %article
+        / ARTICLE: Unique code for each post type
+        .photo
+          %a{href: "http://essentialtheme.tumblr.com/image/41188471063"}
+            %img{alt: "", src: "http://31.media.tumblr.com/8d5bb2d283ee3e958f7bc11f144139b4/tumblr_mh0ybuqcpp1s45jjwo1_500.jpg"}
+        %footer.metadata
+          / Permalink, note count and content source renders on homepage + permalink pages
+          %ul.index
+            %li
+              %a{href: "http://essentialtheme.tumblr.com/post/41188471063"}
+                %time{datetime: "2013-01-22"} 22 January 2013
+            %li
+              %a.notecount{href: "http://essentialtheme.tumblr.com/post/41188471063#notes"} 1 note
+          / Tags and post notes only shown on permalink
+      %article
+        / LINK: Unique code for each post type
+        .link
+          %h1.title
+            %a{href: "http://buildthemes.tumblr.com/"} Build Themes
+        %footer.metadata
+          / Permalink, note count and content source renders on homepage + permalink pages
+          %ul.index
+            %li
+              %a{href: "http://essentialtheme.tumblr.com/post/41188440946/build-themes"}
+                %time{datetime: "2013-01-22"} 22 January 2013
+          / Tags and post notes only shown on permalink
+      %article
+        / VIDEO: Unique code for each post type
+        .video
+          .video-player
+            %iframe{allowfullscreen: "", frameborder: "0", height: "281", src: "http://www.youtube.com/embed/9Kzfv6XPoy4?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0", width: "500"}
+          %p
+            There Is A Mountain by
+            %a{href: "http://www.youtube.com/user/NinaPaley?feature=watch"} Nina Paley
+        %footer.metadata
+          / Permalink, note count and content source renders on homepage + permalink pages
+          %ul.index
+            %li
+              %a{href: "http://essentialtheme.tumblr.com/post/41188405533/there-is-a-mountain-by-nina-paley"}
+                %time{datetime: "2013-01-22"} 22 January 2013
+          / Tags and post notes only shown on permalink
+      %article
+        / CHAT: Unique code for each post type
+        .chat
+          %ul
+            %li.odd
+              %span.label Me:
+              %p
+                What's one plus one?
+            %li.even
+              %span.label You:
+              %p
+                Two . . .
+            %li.odd
+              %span.label Me:
+              %p
+                What's two plus two?
+            %li.even
+              %span.label You:
+              %p
+                Four . . .
+            %li.odd
+              %span.label Me:
+              %p
+                What's four plus four?
+            %li.even
+              %span.label You:
+              %p
+                Eight. . .
+            %li.odd
+              %span.label Me:
+              %p
+                What's eight plus eight?
+            %li.even
+              %span.label You:
+              %p Sixteen. . .
+        %footer.metadata
+          / Permalink, note count and content source renders on homepage + permalink pages
+          %ul.index
+            %li
+              %a{href: "http://essentialtheme.tumblr.com/post/41188258558/math-plus-math"}
+                %time{datetime: "2013-01-22"} 22 January 2013
+          / Tags and post notes only shown on permalink
+      %article
+        / PHOTO: Unique code for each post type
+        .photo
+          %a{href: "http://essentialtheme.tumblr.com/image/41188196606"}
+            %img{alt: "", src: "http://25.media.tumblr.com/tumblr_mcn4zbgRuA1reoed7o1_r1_500.jpg"}
+        %footer.metadata
+          / Permalink, note count and content source renders on homepage + permalink pages
+          %ul.index
+            %li
+              %a{href: "http://essentialtheme.tumblr.com/post/41188196606"}
+                %time{datetime: "2013-01-22"} 22 January 2013
+            %li
+              %a.notecount{href: "http://essentialtheme.tumblr.com/post/41188196606#notes"} 2 notes
+            %li
+              %a{href: "http://basecodes.tumblr.com/post/34550269275"}
+                Source:basecodes
+          / Tags and post notes only shown on permalink
+      %article
+        / Unique code for each post type
+        .quote
+          %blockquote I found a fire which had been left by some wandering beggars, and was overcome with delight at the warmth I experienced from it. In my joy I thrust my hand into the live embers, but quickly drew it out again with a cry of pain. How strange, I thought, that the same cause should produce such opposite effects!
+          %cite
+            .quote Frankenstein’s monster
+        %footer.metadata
+          / Permalink, note count and content source renders on homepage + permalink pages
+          %ul.index
+            %li
+              %a{href: "http://essentialtheme.tumblr.com/post/41188197856/i-found-a-fire-which-had-been-left-by-some"}
+                %time{datetime: "2013-01-22"} 22 January 2013
+            %li
+              %a.notecount{href: "http://essentialtheme.tumblr.com/post/41188197856/i-found-a-fire-which-had-been-left-by-some#notes"} 3 notes
+            %li
+              %a{href: "http://basecodes.tumblr.com/post/34549738944/i-found-a-fire-which-had-been-left-by-some"}
+                Source:basecodes
+          / Tags and post notes only shown on permalink
+      / Close of article
+    / Pagination: previous/next page links
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"}
+    / For users adding Google Analytics ID
+    :javascript
+      var _gaq = [
+        ['_setAccount', ''],
+        ['_trackPageview']
+      ];
+      (function(d, t) {
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+      }(document, 'script'));
+    / BEGIN TUMBLR CODE
+    %iframe#tumblr_controls.visible{frameborder: "0", height: "26", scrolling: "no", src: "http://assets.tumblr.com/assets/html/iframe/o.html?_v=54ee479fda9b930858b7ebe25b8d4574#src=http%3A%2F%2Fessentialtheme.tumblr.com%2F&lang=en_US&name=essentialtheme&avatar=http%3A%2F%2F31.media.tumblr.com%2Favatar_9db81d0aa6c3_64.png&title=Essential+Theme&url=http%3A%2F%2Fessentialtheme.tumblr.com%2F&page_slide=slide", style: "position: fixed; z-index: 2147483647; top: 0px; right: 0px; border: 0px; background-color: transparent; overflow: hidden;", width: "177"}
+    #teaser_iframe_container{style: "display:none;"}
+      %iframe#teaser_iframe{frameborder: "0", height: "1", scrolling: "no", src: "http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Fessentialtheme.tumblr.com%2F&lang=en_US&name=essentialtheme&avatar=http%3A%2F%2F31.media.tumblr.com%2Favatar_9db81d0aa6c3_64.png&title=Essential+Theme&url=http%3A%2F%2Fessentialtheme.tumblr.com%2F&page_slide=slide", width: "1"}
+    :javascript
+      (function(Tumblr) {
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+          // Don't do anything until the first initialize event
+          Tumblr.PostMessageListener.initialize(function(message, origin) {
+            if (follow_iframe_initialized || message.length < 2) return;
+
+            if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+              Tumblr.FollowTeaser.current_page = 1;
+              Tumblr.FollowTeaser.infer_infinite_scroll = true;
+              Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=64bdceb79182efb329691fa84176b2cf");
+              Tumblr.FollowTeaser.scroll_listener(true);
+              follow_iframe_initialized = true;
+            }
+          });
+        }
+      })(this.Tumblr || (this.Tumblr = {}));
+    /[if IE] <script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script>
+    %iframe#ga_target{frameborder: "0", height: "1", scrolling: "no", src: "http://assets.tumblr.com/analytics.html?4ad65b336ed79fd20642d36359ed9843", style: "background-color:transparent; overflow:hidden; position:absolute; top:0; left:0 z-index:9999;", width: "1"}
+    :javascript
+      window.setTimeout(function() {
+        COMSCORE = true;
+        var analytics_frame = document.getElementById('ga_target');
+        analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+      }, 1000);
+    :javascript
+      var _qevents = _qevents || [];
+
+      (function() {
+        var elem = document.createElement('script');
+
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+      })();
+    :javascript
+      _qevents.push({
+        qacct: 'p-19UtqE8ngoZbM'
+      });
+    %noscript
+      \&lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif" height="1" width="1" alt="Quantcast"/&gt;&lt;/div&gt;
+    :javascript
+      ! function(s) {
+        s.src = 'http://www.tumblr.com/impixu?T=1384292612&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvZXNzZW50aWFsdGhlbWUudHVtYmxyLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyJ9&U=LNAFDLMHDD&K=3605e64c38a962e219be0ad18979d57a3212f7fd6d90b8522885741c9ea0e477&R=http%3A%2F%2Fbuildthemes.tumblr.com%2Fcode%2Fessential'.replace(/&R=[^&$]*/, '').concat('&R=' + escape(document.referrer)).slice(0, 2000).replace(/%.?.?$/, '');
+      }(new Image());
+    %noscript &lt;img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1384292612&amp;J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvZXNzZW50aWFsdGhlbWUudHVtYmxyLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyIsIm5vc2NyaXB0IjoxfQ==&amp;U=LNAFDLMHDD&amp;K=81aad8d3174b2f13106b0f7acccf1902a80dbc67eeb0ac003c098e9e70665ce7&amp;R=http%3A%2F%2Fbuildthemes.tumblr.com%2Fcode%2Fessential"&gt;
+    :javascript
+      ! function(s) {
+        s.src = 'http://www.tumblr.com/impixu?T=1384292612&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Vzc2VudGlhbHRoZW1lLnR1bWJsci5jb21cLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC8iLCJwb3N0cyI6W3sicG9zdGlkIjoiNDExODg0NzEwNjMiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiNDExODg0NDA5NDYiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiNDExODg0MDU1MzMiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiNDExODgyNTg1NTgiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicm9vdF9ibG9naWQiOiI2OTIwNzU4MyIsInJvb3RfcG9zdGlkIjoiMzQ1NTAyNjkyNzUiLCJwb3N0aWQiOiI0MTE4ODE5NjYwNiIsImJsb2dpZCI6IjkwNzY5MzYzIiwic291cmNlIjozM30seyJyb290X2Jsb2dpZCI6IjY5MjA3NTgzIiwicm9vdF9wb3N0aWQiOiIzNDU0OTczODk0NCIsInBvc3RpZCI6IjQxMTg4MTk3ODU2IiwiYmxvZ2lkIjoiOTA3NjkzNjMiLCJzb3VyY2UiOjMzfV19&U=MDDKEIHDDH&K=8c8a2d01105a7b58534ea6557a3a44b042217021acca03b8631285206ff04ea8&R=http%3A%2F%2Fbuildthemes.tumblr.com%2Fcode%2Fessential'.replace(/&R=[^&$]*/, '').concat('&R=' + escape(document.referrer)).slice(0, 2000).replace(/%.?.?$/, '');
+      }(new Image());
+    %noscript &lt;img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1384292612&amp;J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Vzc2VudGlhbHRoZW1lLnR1bWJsci5jb21cLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC8iLCJwb3N0cyI6W3sicG9zdGlkIjoiNDExODg0NzEwNjMiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiNDExODg0NDA5NDYiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiNDExODg0MDU1MzMiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiNDExODgyNTg1NTgiLCJibG9naWQiOiI5MDc2OTM2MyIsInNvdXJjZSI6MzN9LHsicm9vdF9ibG9naWQiOiI2OTIwNzU4MyIsInJvb3RfcG9zdGlkIjoiMzQ1NTAyNjkyNzUiLCJwb3N0aWQiOiI0MTE4ODE5NjYwNiIsImJsb2dpZCI6IjkwNzY5MzYzIiwic291cmNlIjozM30seyJyb290X2Jsb2dpZCI6IjY5MjA3NTgzIiwicm9vdF9wb3N0aWQiOiIzNDU0OTczODk0NCIsInBvc3RpZCI6IjQxMTg4MTk3ODU2IiwiYmxvZ2lkIjoiOTA3NjkzNjMiLCJzb3VyY2UiOjMzfV0sIm5vc2NyaXB0IjoxfQ==&amp;U=MDDKEIHDDH&amp;K=2b419b3d2ed34e1eb095ca6ee0250d9062e4d0ac64b6371033ac2ebf5fdc3337&amp;R=http%3A%2F%2Fbuildthemes.tumblr.com%2Fcode%2Fessential"&gt;
+    %script{src: "http://l.yimg.com/ss/rapid-3.9.js", type: "text/javascript"}
+    :javascript
+      (function(YAHOO) {
+        if (YAHOO) {
+          YAHOO.i13n.beacon_server = 'nol.yahoo.com';
+          var keys = {
+            pd: '/',
+            _li: 0,
+            i_rad: 0,
+            i_strm: 0
+          };
+          YAHOO.rapid = new YAHOO.i13n.Rapid({
+            spaceid: 1197719229,
+            oo: 1,
+            client_only: 1,
+            yql_enabled: false,
+            keys: keys
+          });
+        }
+      })(window.YAHOO);
+    / END TUMBLR CODE
