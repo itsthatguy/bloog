@@ -3,31 +3,29 @@
   <style type="text/css">{CustomCSS}</style>
 
 
-    <script="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-    {block:Description}
-    <meta name="description" content="{MetaDescription}" />
-    {/block:Description}
-
-  <h1>{Title}</h1>
-
+  <script="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   {block:Description}
-    <p id="description">{Description}</p>
+  <meta name="description" content="{MetaDescription}" />
   {/block:Description}
 
-  <ol id="posts">
-    {block:Posts}
+  <%= partial "/header" %>
 
-    <%= partial "/posts/text" %>
-    <%= partial "/posts/photo" %>
-    <%= partial "/posts/photoset" %>
-    <%= partial "/posts/quote" %>
-    <%= partial "/posts/link" %>
-    <%= partial "/posts/chat" %>
-    <%= partial "/posts/video"  %>
-    <%= partial "/posts/audio" %>
+  <div class="row">
+    <ol id="posts">
+      {block:Posts}
 
-    {/block:Posts}
-  </ol>
+      <%= partial "/posts/text" %>
+      <%= partial "/posts/photo" %>
+      <%= partial "/posts/photoset" %>
+      <%= partial "/posts/quote" %>
+      <%= partial "/posts/link" %>
+      <%= partial "/posts/chat" %>
+      <%= partial "/posts/video"  %>
+      <%= partial "/posts/audio" %>
+
+      {/block:Posts}
+    </ol>
+  </div>
 
   <p id="footer">
 

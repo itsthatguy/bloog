@@ -1,9 +1,9 @@
 {block:Quote}
 %li.post-quote
-  .row
-    .small-12.columns
-      "{Quote}"
-      {block:Source}
-      %div.source {Source}
-      {/block:Source}
+  .post
+
+    %blockquote
+      "{Quote}"{block:Source}<cite>{Source}</cite>{/block:Source}
+
+    = partial "/posts/footer"
 {/block:Quote}

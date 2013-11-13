@@ -51,9 +51,9 @@ $em-base: 16 !default;
 
 $default-float: left;
 
-$body-bg: $off-white;
-$body-font-color: $black;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-bg: $white;
+$body-font-color: $off-black;
+$body-font-family: $serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -67,7 +67,7 @@ $body-font-color: $black;
 
 // Colors
 
-// $primary-color: #2ba6cb;
+$primary-color: $aqua;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;

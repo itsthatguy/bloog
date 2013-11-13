@@ -1,17 +1,130 @@
-html { height: 100%; }
+html {
+  height: 100%;
+  overflow-x: hidden; }
 
-body { min-height: 100%; }
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
 
 * { @include text-shadow(none); }
 
+cite {
+  @include inline-block;
+  margin-bottom: 1.25em;
+  font-style: italic;
+  &:before {
+    @include inline-block;
+    content: "\2014 \0020";
+    margin-right: 4px;
+  }
+}
+
+#header {
+  background: $primary-color;
+  padding: 1.25em 0;
+  margin-bottom: 2.5em;
+  h1 { font-size: emCalc(56); }
+  p { font-size: emCalc(24); }
+  &,h1 { color: $white; }
+
+}
+
+%flush-top {
+  .post { padding-top: 0; }
+}
+
 #posts {
+  @include block-grid(1);
+  font-size: emCalc(24);
+  overflow-x: hidden;
   li {
-    display: block;
-    // padding-bottom: 1em;
-    // margin-bottom: 1em;
-    > div {
-      background: $white;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+    &.post-quote {
+      @extend %flush-top;
     }
+    &.post-photo {
+      @extend %flush-top;
+    }
+    &.post-photoset {
+      @extend %flush-top;
+    }
+    .post {
+      @include grid-row;
+      overflow-x: hidden;
+      // background: rgba($white, 0.95);
+      font-size: emCalc(14);
+      padding-bottom: 1.25em;
+      padding-top: 1.25em;
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+      margin-bottom: 2.5em;
+      .content { margin: 0; }
+
+      .footer {
+        color: $light-grey;
+        font-family: $sans-title;
+        font-size: emCalc(12);
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba($primary-color, .3);
+        margin: 0;
+        padding: 0 0 2.5em 0;
+      }
+      // @media #{$small} {
+      //   .content {
+      //     @include grid-column(8);
+      //     margin: 0;
+      //   }
+      //   .footer {
+      //     @include grid-column(4);
+      //     border: none;
+      //     padding: 0 0.9375em;
+      //   }
+
+      // }
+    }
+
+
+    blockquote {
+      border-left: 4px solid $primary-color;
+      color: $grey;
+      font-family: "ff-tisa-web-pro";
+      font-size: emCalc(24);
+      font-style: italic;
+      padding-top: 1.25em;
+      padding-bottom: 1.25em;
+      cite {
+        color: $light-grey;
+        font-size: emCalc(10);
+      }
+    }
+    .photo {
+      font-size: emCalc(24);
+      margin-bottom: 1.25em;
+      max-height: 16em;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .html_photoset {
+      margin-bottom: 1.25em;
+
+      overflow-x: hidden;
+    }
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $sans-header;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+a {
+  &:hover {
+    color: $primary-color;
+    border-bottom: 1px solid $primary-color;
   }
 }
