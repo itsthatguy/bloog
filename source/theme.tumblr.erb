@@ -8,7 +8,7 @@
   <meta name="description" content="{MetaDescription}" />
   {/block:Description}
 
-  <%= partial "/header" %>
+  <%= partial "header" %>
 
   <div class="row">
     <ol id="posts">
@@ -27,16 +27,6 @@
     </ol>
   </div>
 
-  <p id="footer">
+  <%= partial "footer" %>
 
-    {block:PreviousPage}
-      <a class="link" href="{PreviousPage}"> &#171; Previous</a>
-    {/block:PreviousPage}
-
-    {block:NextPage}
-      <a class="link" href="{NextPage}"> Next &#187;</a>
-    {/block:NextPage}
-
-    <a class="link" href="/archive"> Archive</a>
-  </p>
 {/block:tumblrThemr}
