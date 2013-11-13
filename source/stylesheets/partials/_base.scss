@@ -84,18 +84,7 @@ cite {
         margin: 0;
         padding: 0 0 2.5em 0;
       }
-      // @media #{$small} {
-      //   .content {
-      //     @include grid-column(8);
-      //     margin: 0;
-      //   }
-      //   .footer {
-      //     @include grid-column(4);
-      //     border: none;
-      //     padding: 0 0.9375em;
-      //   }
-
-      // }
+      ul,ol { margin-left: 0; }
     }
 
     .photo {
