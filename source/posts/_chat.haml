@@ -1,20 +1,19 @@
 {block:Chat}
 %li.post-chat
-  .row
-    .small-12.columns
-      {block:Title}
-      %h3
-        %a.link{ :href => "{Permalink}" } {Title}
-      {/block:Title}
+  .post
+    {block:Title}
+    %h3
+      %a.link{ :href => "{Permalink}" } {Title}
+    {/block:Title}
 
-      %ul.chat
+    %ul.chat
 
-        {block:Lines}
-        %li{ :class => "{Alt} user_{UserNumber}" }
-          {block:Label}
-          %span.label {Label}
-          {/block:Label}
-          {Line}
-        {/block:Lines}
-
+      {block:Lines}
+      %li{ :class => "{Alt} user_{UserNumber}" }
+        {block:Label}
+        %span.label {Label}
+        {/block:Label}
+        {Line}
+      {/block:Lines}
+    = partial "/posts/footer"
 {/block:Chat}

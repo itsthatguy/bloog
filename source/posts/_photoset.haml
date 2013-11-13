@@ -1,9 +1,9 @@
 {block:Photoset}
 %li.post-photoset
-  .row
-    .small-12.columns
-      {Photoset-500}
-      {block:Caption}
-      %div.caption {Caption}
-      {/block:Caption}
+  .post
+    {Photoset-500}
+    {block:Caption}
+    .content {Caption}
+    {/block:Caption}
+    = partial "/posts/footer"
 {/block:Photoset}

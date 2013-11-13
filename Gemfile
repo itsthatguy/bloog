@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-ruby "1.9.3"
+ruby "2.0.0"
 
-gem 'middleman', '~>3.0.14'
+gem 'middleman', '~>3.2.0'
 gem 'compass', '~>0.12.2'
-gem 'zurb-foundation', '~>4.3.1'
+gem 'zurb-foundation', '~>4.3.2'
 

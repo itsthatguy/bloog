@@ -1,10 +1,11 @@
 {block:Text}
 %li.post-text
-  .row
-    .small-12.columns
-      {block:Title}
+  .post
+    {block:Title}
+    .title
       %h3
         %a{ :href => "{Permalink}" } {Title}
-      {/block:Title}
-      {Body}
+    {/block:Title}
+    .content {Body}
+    = partial "/posts/footer"
 {/block:Text}
