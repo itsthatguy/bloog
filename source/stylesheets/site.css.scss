@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 @import "compass/css3";
 @import "compass/reset";
@@ -49,5 +50,7 @@
 
 // My Partials
 @import "partials/layout";
+@import "partials/mixins";
+@import "partials/icons";
 @import "partials/modules";
 @import "partials/base";

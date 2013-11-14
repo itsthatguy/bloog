@@ -1,0 +1,83 @@
+%posts {
+  @include block-grid(1);
+  font-size: emCalc(24);
+}
+
+%post {
+  @include grid-row;
+  overflow-x: hidden;
+  font-size: emCalc(14);
+  padding-bottom: 1.25em;
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  margin-bottom: 1em;
+}
+
+%post-footer {
+  color: $light-grey;
+  font-family: $sans-title;
+  font-size: emCalc(12);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid $off-white;
+  margin: 0;
+  padding: 0 0 2.5em 0;
+  > ul > li {
+    @include inline-block;
+    margin-right: 1em;
+  }
+}
+
+%post-type-quote {
+  blockquote {
+    background: $primary-color;
+    color: $white;
+    font-family: "ff-tisa-web-pro";
+    font-size: emCalc(24);
+    font-style: italic;
+    padding-top: 1.25em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    cite {
+      color: $white;
+      font-size: emCalc(10);
+    }
+  }
+}
+
+%post-type-photo {
+  .photo {
+    font-size: emCalc(24);
+    margin-bottom: 1.25em;
+    max-height: 16em;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+%post-type-photoset {
+  .html_photoset {
+    margin-bottom: 1.25em;
+    overflow: hidden;
+  }
+}
+
+%post-type-chat {
+  ul.chat {
+    @extend blockquote;
+    li {
+      padding: 0.5em 1em 0.75em;
+
+      // &.odd { background: rgba($light-grey, 0.2); }
+      // &.even { background: rgba($secondary-color, 0.2); }
+    }
+  }
+}
+
+%flush-top {
+  .post { padding-top: 0; }
+}

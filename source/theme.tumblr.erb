@@ -1,8 +1,16 @@
+<% if development? %>
 {block:tumblrThemr}
+<% end %>
 <html>
 <head>
-  <link rel="stylesheet" href="/stylesheets/site.css">
-  <style type="text/css"></style>
+  <% if development? %>
+    <link rel="stylesheet" href="/stylesheets/site.css">
+  <% end %>
+  <% if build? %>
+  <style type="text/css">
+
+  </style>
+  <% end %>
   <style type="text/css">{CustomCSS}</style>
 
 
@@ -11,6 +19,8 @@
   <meta name='text:Github' content='' />
   <meta name='text:Dribbble' content='' />
   <meta name="image:Avatar" content="" />
+
+
   <script type="text/javascript" src="//use.typekit.net/pwn0nhw.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
@@ -39,11 +49,13 @@
 
           {/block:Posts}
         </ol>
+        <%= partial "footer" %>
       </div>
     </div>
   </div>
 
-  <%= partial "footer" %>
 </body>
 </html>
+<% if development? %>
 {/block:tumblrThemr}
+<% end %>

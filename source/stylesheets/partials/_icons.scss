@@ -1,0 +1,60 @@
+$font-name: 'tumblr';
+$base-url: 'https://github.com/itsthatguy/bloog/raw/master/source/fonts/';
+
+$icons: clock "\e600",
+        bubble "\e601",
+        twitter "\e602",
+        github "\e603",
+        dribbble "\e604",
+        tag "\e605";
+
+
+@font-face {
+  font-family: $font-name;
+  src:  font-url("#{$base-url}#{$font-name}.eot");
+  src:  font-url("#{$base-url}#{$font-name}.eot?#iefix") format("embedded-opentype"),
+        font-url("#{$base-url}#{$font-name}.ttf") format("truetype"),
+        font-url("#{$base-url}#{$font-name}.woff") format("woff"),
+        font-url("#{$base-url}#{$font-name}.svg##{$font-name}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+%icon-font {
+  font-family: $font-name;
+  speak: none;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon($icon) {
+  $char-code: get-list-value($icons, $icon);
+  @extend %icon-font;
+  content: "#{$char-code}";
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  @extend %icon-font;
+  content: attr(data-icon);
+}
+
+.button > [class*="icon-"] { margin-right: $em-base; }
+
+[class*="icon-"] {
+  @extend %icon-font;
+  &:active { text-decoration: none; }
+}
+
+@each $icon in $icons {
+  .icon-#{nth($icon, 1)}:before { content: '#{nth($icon, 2)}' }
+}

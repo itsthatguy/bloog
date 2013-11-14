@@ -1,0 +1,12 @@
+@mixin set-font-color($color) {
+  h1,h2,h3,h4,h5,h6,p,& { color: $color; }
+}
+
+@function get-list-value($list, $key) {
+  @each $item in $list {
+    @if ($key == nth($item, 1)) {
+      @return nth($item, 2);
+    }
+  }
+  @return false;
+}

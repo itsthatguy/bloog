@@ -1,16 +1,23 @@
 .footer
-  .date {TimeAgo}
-  {block:IndexPage}
-  %a(class="dsq-comment-count" href="{Permalink}#disqus_thread") Comments
-  :javascript
-    var disqus_shortname = '{text:Disqus}';
+  %ul
+    %li.date
+      %i.icon-clock
+      %span {TimeAgo}
+    %li.tags= partial "/posts/post-meta"
+    {block:IndexPage}
+    %li.comment-count
+      %i.icon-bubble
+      %span
+        %a(class="dsq-comment-count" href="{Permalink}#disqus_thread") Comments
+      :javascript
+        var disqus_shortname = '{text:Disqus}';
 
-    (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-  {/block:IndexPage}
+        (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    {/block:IndexPage}
 
-= partial "posts/post-comments"
+= partial "/posts/post-comments"
