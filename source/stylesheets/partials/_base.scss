@@ -7,19 +7,13 @@ body {
   overflow: hidden;
 }
 
-* { @include text-shadow(none); }
 
-cite {
-  @include inline-block;
-  margin-bottom: 1.25em;
-  font-style: italic;
-  &:before {
-    @include inline-block;
-    content: "\2014 \0020";
-    margin-right: 4px;
-  }
-}
 
+/*******************************************************************************
+ *
+ * LAYOUT
+ *
+ ******************************************************************************/
 #header {
   background: $primary-color;
   padding: 1.25em 0;
@@ -27,12 +21,8 @@ cite {
   h1 { font-size: emCalc(56); }
   p { font-size: emCalc(24); }
   &,h1 { color: $white; }
-
 }
 
-%flush-top {
-  .post { padding-top: 0; }
-}
 
 #sidebar {
   @include clearfix;
@@ -55,8 +45,16 @@ cite {
     img { display: none; }
   }
 }
+
 #main { @include clearfix; }
 
+
+
+/*******************************************************************************
+ *
+ * LAYOUT MEDIA QUERIES
+ *
+ ******************************************************************************/
 @media #{$small} {
   #sidebar {
     text-align: center;
@@ -84,46 +82,45 @@ cite {
 
 #main-wrapper { @include grid-row; }
 
+
+
+/*******************************************************************************
+ *
+ * #POSTS
+ *
+ ******************************************************************************/
 #posts {
-  @include block-grid(1);
-  font-size: emCalc(24);
+  @extend %posts;
   li {
     &.post-quote {
       @extend %flush-top;
-
-      blockquote {
-        background: $primary-color;
-        color: $white;
-        font-family: "ff-tisa-web-pro";
-        font-size: emCalc(24);
-        font-style: italic;
-        padding-top: 1.25em;
-        padding-bottom: 1.25em;
-        cite {
-          color: $white;
-          font-size: emCalc(10);
-        }
-      }
+      @extend %post-type-quote;
     }
     &.post-photo {
       @extend %flush-top;
+      @extend %post-type-photo;
     }
     &.post-photoset {
       @extend %flush-top;
+      @extend %post-type-photoset;
     }
-    .post {
-      @include grid-row;
-      overflow-x: hidden;
-      // background: rgba($white, 0.95);
-      font-size: emCalc(14);
-      padding-bottom: 1.25em;
-      padding-top: 1.25em;
-      padding-left: 1.25em;
-      padding-right: 1.25em;
-      margin-bottom: 2.5em;
 
-      .title {
-        // border-bottom: 3px solid $off-white;
+    .post {
+      @extend %post;
+
+      .title { }
+
+      .meta {
+        ul.tags li {
+          @include inline-block;
+          font-size: emCalc(10);
+          &, a { color: $light-grey; }
+          &:after {
+            @include inline-block;
+            content: ',';
+            margin-left: -4px;
+          }
+        }
       }
 
       .content {
@@ -131,34 +128,26 @@ cite {
         margin-bottom: 1.25em;
       }
 
-      .footer {
-        color: $light-grey;
-        font-family: $sans-title;
-        font-size: emCalc(12);
-        font-weight: 600;
-        text-transform: uppercase;
-        border-bottom: 1px solid $off-white;
-        margin: 0;
-        padding: 0 0 2.5em 0;
-      }
+      .footer { @extend %post-footer; }
+
+
       ul,ol { margin-left: 0; }
     }
 
-    .photo {
-      font-size: emCalc(24);
-      margin-bottom: 1.25em;
-      max-height: 16em;
-      overflow: hidden;
-      img {
-        width: 100%;
-      }
-    }
-    .html_photoset {
-      margin-bottom: 1.25em;
-      overflow: hidden;
-    }
+
   }
 }
+
+
+
+
+/*******************************************************************************
+ *
+ * TYPOGRAPHY
+ *
+ ******************************************************************************/
+
+* { @include text-shadow(none); }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $sans-header;
@@ -171,5 +160,16 @@ a {
   &:hover {
     color: $primary-color;
     border-bottom: 1px solid $primary-color;
+  }
+}
+
+cite {
+  @include inline-block;
+  margin-bottom: 1.25em;
+  font-style: italic;
+  &:before {
+    @include inline-block;
+    content: "\2014 \0020";
+    margin-right: 4px;
   }
 }
