@@ -20,10 +20,11 @@
   <meta name='text:Dribbble' content='' />
   <meta name="image:Avatar" content="" />
 
-
+  <% if build? %>
   <script type="text/javascript" src="//use.typekit.net/pwn0nhw.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <% end %>
   {block:Description}
   <meta name="description" content="{MetaDescription}" />
   {/block:Description}
