@@ -1,10 +1,11 @@
 
 {block:PermalinkPage}
-{block:IfDisqusShortname}
+{block:IfDisqus}
+hi
 
 #disqus_thread
 :javascript
-  var disqus_shortname = '{text:Disqus Shortname}';
+  var disqus_shortname = '{text:Disqus}';
 
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -12,5 +13,5 @@
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 
-{/block:IfDisqusShortname}
+{/block:IfDisqus}
 {/block:PermalinkPage}

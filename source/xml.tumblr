@@ -1,15 +1,28 @@
-<?xml version="1.0"?>
-<!-- 
+<!--
 
-TumblrThemr XML Theme
+Based on the TumblrThemr XML Theme
 http://tumblrthemr.icelab.com.au
-
-Version: 1.1
 
 Made by Icelab and Jim Whimpey
 
 -->
+<?xml version="1.0"?>
+<!-- ADD META TAGS FOR CUSTOM FIELDS HERE -->
+<meta name='text:Disqus' content='' />
+<meta name='text:Twitter' content='' />
+<meta name='text:Github' content='' />
+<meta name='text:Dribbble' content='' />
+<meta name="image:Avatar" content="" />
+
+
 <data>
+  <!-- ADD CUSTOM FIELDS HERE -->
+  <text:Disqus>{text:Disqus}</text:Disqus>
+  <text:Twitter>{text:Twitter}</text:Twitter>
+  <text:Github>{text:Github}</text:Github>
+  <text:Dribbble>{text:Dribbble}</text:Dribbble>
+  <image:Avatar>{image:Avatar}</image:Avatar>
+
   <!-- Title -->
   <Title>{Title}</Title>
   <PlaintextTitle>{PlaintextTitle}</PlaintextTitle>
@@ -23,7 +36,7 @@ Made by Icelab and Jim Whimpey
   <JSName>{JSName}</JSName>
   <JSPlaintextName>{JSPlaintextName}</JSPlaintextName>
   <URLEncodedName>{URLEncodedName}</URLEncodedName>
-  
+
   {block:Description}
   <block:Description>
     <!-- Description -->
@@ -46,70 +59,70 @@ Made by Icelab and Jim Whimpey
   <JSRSS>{JSRSS}</JSRSS>
   <JSPlaintextRSS>{JSPlaintextRSS}</JSPlaintextRSS>
   <URLEncodedRSS>{URLEncodedRSS}</URLEncodedRSS>
-  
+
   <!-- Favicon -->
   <Favicon>{Favicon}</Favicon>
   <PlaintextFavicon>{PlaintextFavicon}</PlaintextFavicon>
   <JSFavicon>{JSFavicon}</JSFavicon>
   <JSPlaintextFavicon>{JSPlaintextFavicon}</JSPlaintextFavicon>
   <URLEncodedFavicon>{URLEncodedFavicon}</URLEncodedFavicon>
-  
+
   <!-- CustomCSS -->
   <CustomCSS><![CDATA[{CustomCSS}]]></CustomCSS>
   <PlaintextCustomCSS>{PlaintextCustomCSS}</PlaintextCustomCSS>
   <JSCustomCSS>{JSCustomCSS}</JSCustomCSS>
   <JSPlaintextCustomCSS>{JSPlaintextCustomCSS}</JSPlaintextCustomCSS>
   <URLEncodedCustomCSS>{URLEncodedCustomCSS}</URLEncodedCustomCSS>
-  
+
   <!-- PortraitURL-16 -->
   <PortraitURL-16>{PortraitURL-16}</PortraitURL-16>
   <PlaintextPortraitURL-16>{PlaintextPortraitURL-16}</PlaintextPortraitURL-16>
   <JSPortraitURL-16>{JSPortraitURL-16}</JSPortraitURL-16>
   <JSPlaintextPortraitURL-16>{JSPlaintextPortraitURL-16}</JSPlaintextPortraitURL-16>
   <URLEncodedPortraitURL-16>{URLEncodedPortraitURL-16}</URLEncodedPortraitURL-16>
-  
+
   <!-- PortraitURL-24 -->
   <PortraitURL-24>{PortraitURL-24}</PortraitURL-24>
   <PlaintextPortraitURL-24>{PlaintextPortraitURL-24}</PlaintextPortraitURL-24>
   <JSPortraitURL-24>{JSPortraitURL-24}</JSPortraitURL-24>
   <JSPlaintextPortraitURL-24>{JSPlaintextPortraitURL-24}</JSPlaintextPortraitURL-24>
   <URLEncodedPortraitURL-24>{URLEncodedPortraitURL-24}</URLEncodedPortraitURL-24>
-  
+
   <!-- PortraitURL-30 -->
   <PortraitURL-30>{PortraitURL-30}</PortraitURL-30>
   <PlaintextPortraitURL-30>{PlaintextPortraitURL-30}</PlaintextPortraitURL-30>
   <JSPortraitURL-30>{JSPortraitURL-30}</JSPortraitURL-30>
   <JSPlaintextPortraitURL-30>{JSPlaintextPortraitURL-30}</JSPlaintextPortraitURL-30>
   <URLEncodedPortraitURL-30>{URLEncodedPortraitURL-30}</URLEncodedPortraitURL-30>
-  
+
   <!-- PortraitURL-40 -->
   <PortraitURL-40>{PortraitURL-40}</PortraitURL-40>
   <PlaintextPortraitURL-40>{PlaintextPortraitURL-40}</PlaintextPortraitURL-40>
   <JSPortraitURL-40>{JSPortraitURL-40}</JSPortraitURL-40>
   <JSPlaintextPortraitURL-40>{JSPlaintextPortraitURL-40}</JSPlaintextPortraitURL-40>
   <URLEncodedPortraitURL-40>{URLEncodedPortraitURL-40}</URLEncodedPortraitURL-40>
-  
+
   <!-- PortraitURL-48 -->
   <PortraitURL-48>{PortraitURL-48}</PortraitURL-48>
   <PlaintextPortraitURL-48>{PlaintextPortraitURL-48}</PlaintextPortraitURL-48>
   <JSPortraitURL-48>{JSPortraitURL-48}</JSPortraitURL-48>
   <JSPlaintextPortraitURL-48>{JSPlaintextPortraitURL-48}</JSPlaintextPortraitURL-48>
   <URLEncodedPortraitURL-48>{URLEncodedPortraitURL-48}</URLEncodedPortraitURL-48>
-  
+
   <!-- PortraitURL-64 -->
   <PortraitURL-64>{PortraitURL-64}</PortraitURL-64>
   <PlaintextPortraitURL-64>{PlaintextPortraitURL-64}</PlaintextPortraitURL-64>
   <JSPortraitURL-64>{JSPortraitURL-64}</JSPortraitURL-64>
   <JSPlaintextPortraitURL-64>{JSPlaintextPortraitURL-64}</JSPlaintextPortraitURL-64>
   <URLEncodedPortraitURL-64>{URLEncodedPortraitURL-64}</URLEncodedPortraitURL-64>
-  
+
   <!-- PortraitURL-96 -->
   <PortraitURL-96>{PortraitURL-96}</PortraitURL-96>
   <PlaintextPortraitURL-96>{PlaintextPortraitURL-96}</PlaintextPortraitURL-96>
   <JSPortraitURL-96>{JSPortraitURL-96}</JSPortraitURL-96>
   <JSPlaintextPortraitURL-96>{JSPlaintextPortraitURL-96}</JSPlaintextPortraitURL-96>
   <URLEncodedPortraitURL-96>{URLEncodedPortraitURL-96}</URLEncodedPortraitURL-96>
-  
+
   <!-- PortraitURL-128 -->
   <PortraitURL-128>{PortraitURL-128}</PortraitURL-128>
   <PlaintextPortraitURL-128>{PlaintextPortraitURL-128}</PlaintextPortraitURL-128>
@@ -149,21 +162,21 @@ Made by Icelab and Jim Whimpey
     {/block:NextPost}
     </block:PermalinkPagination>
   {/block:PermalinkPagination}
-  
+
   <!-- Submissions -->
   {block:SubmissionsEnabled}
   <block:SubmissionsEnabled>
     <SubmitLabel>{SubmitLabel}</SubmitLabel>
   </block:SubmissionsEnabled>
   {/block:SubmissionsEnabled}
-  
+
   <!-- Ask -->
   {block:AskEnabled}
   <block:AskEnabled>
     <AskLabel>{AskLabel}</AskLabel>
   </block:AskEnabled>
   {/block:AskEnabled}
-  
+
   <!-- Pages -->
   {block:HasPages}
   <block:HasPages>
@@ -177,15 +190,15 @@ Made by Icelab and Jim Whimpey
     </block:Pages>
   </block:HasPages>
   {/block:HasPages}
-  
+
   <!-- Permalink Navigation -->
   {block:PermalinkPagination}
   <block:PermalinkPagination>
-    {block:PreviousPost} 
+    {block:PreviousPost}
     <block:PreviousPost>
       <PreviousPost>{PreviousPost}</PreviousPost>
     </block:PreviousPost>
-    {/block:PreviousPost} 
+    {/block:PreviousPost}
     {block:NextPost}
     <block:NextPost>
       <NextPost>{NextPost}</NextPost>
@@ -193,9 +206,9 @@ Made by Icelab and Jim Whimpey
     {/block:NextPost}
   </block:PermalinkPagination>
   {/block:PermalinkPagination}
-  
+
   <!-- Posts -->
-  
+
   <block:Posts>
     <exists>true</exists>
     {block:Posts}
@@ -214,7 +227,7 @@ Made by Icelab and Jim Whimpey
           <PostID>{PostID}</PostID>
           <TagsAsClasses>{TagsAsClasses}</TagsAsClasses>
           <PostNotesURL>{PostNotesURL}</PostNotesURL>
-        </block:Title>        
+        </block:Title>
         {/block:Title}
         <FakeBody><![CDATA[{Body}]]></FakeBody>
         <PostType>{PostType}</PostType>
@@ -251,7 +264,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Text>
     {/block:Text}
-    
+
     <!-- Regular (deprecated) -->
     {block:Regular}
       <block:Regular>
@@ -265,7 +278,7 @@ Made by Icelab and Jim Whimpey
           <PostID>{PostID}</PostID>
           <TagsAsClasses>{TagsAsClasses}</TagsAsClasses>
           <PostNotesURL>{PostNotesURL}</PostNotesURL>
-        </block:Title>        
+        </block:Title>
         {/block:Title}
         <FakeBody><![CDATA[{Body}]]></FakeBody>
         <PostType>{PostType}</PostType>
@@ -302,7 +315,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Regular>
     {/block:Regular}
-    
+
     <!-- Photo -->
     {block:Photo}
       <block:Photo>
@@ -367,7 +380,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Photo>
     {/block:Photo}
-    
+
     <!-- Photoset -->
     {block:Photoset}
       <block:Photoset>
@@ -421,7 +434,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Photoset>
     {/block:Photoset}
-    
+
     <!-- Quote -->
     {block:Quote}
       <block:Quote>
@@ -474,14 +487,14 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Quote>
     {/block:Quote}
-    
+
     <!-- Link -->
     {block:Link}
       <block:Link>
         <URL>{URL}</URL>
         <Name>{Name}</Name>
         <Target>{Target}</Target>
-        {block:Description} 
+        {block:Description}
         <block:Description>
           <Description>{Description}</Description>
           <!-- Common -->
@@ -528,7 +541,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Link>
     {/block:Link}
-    
+
     <!-- Chat -->
     {block:Chat}
       <block:Chat>
@@ -594,7 +607,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Chat>
     {/block:Chat}
-    
+
     <!-- Audio -->
     {block:Audio}
       <block:Audio>
@@ -713,7 +726,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Audio>
     {/block:Audio}
-    
+
     <!-- Video -->
     {block:Video}
       <block:Video>
@@ -767,7 +780,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Video>
     {/block:Video}
-    
+
     <!-- Answer -->
     {block:Answer}
       <block:Answer>
@@ -817,7 +830,7 @@ Made by Icelab and Jim Whimpey
         <TimeAgo>{TimeAgo}</TimeAgo>
       </block:Answer>
     {/block:Answer}
-    
+
     <!-- Common -->
     <PostType>{PostType}</PostType>
     <Permalink>{Permalink}</Permalink>
@@ -953,8 +966,8 @@ Made by Icelab and Jim Whimpey
     </item>
     {/block:Posts}
   </block:Posts>
-  
-  
+
+
   {block:GroupMembers}
   <!-- Group Members -->
   <block:GroupMembers>
@@ -972,19 +985,19 @@ Made by Icelab and Jim Whimpey
         <GroupMemberPortraitURL-64>{GroupMemberPortraitURL-64}</GroupMemberPortraitURL-64>
         <GroupMemberPortraitURL-96>{GroupMemberPortraitURL-96}</GroupMemberPortraitURL-96>
         <GroupMemberPortraitURL-128>{GroupMemberPortraitURL-128}</GroupMemberPortraitURL-128>
-      </item>  
-    {/block:GroupMember}  
+      </item>
+    {/block:GroupMember}
     </block:GroupMember>
   </block:GroupMembers>
   {/block:GroupMembers}
-  
+
   {block:IndexPage}
     <!-- Permalink Page -->
     <block:IndexPage>
       <exists>true</exists><!-- to ensure it has content -->
     </block:IndexPage>
   {/block:IndexPage}
-  
+
   {block:PermalinkPage}
     <!-- Permalink Page -->
     <block:PermalinkPage>
@@ -1010,7 +1023,7 @@ Made by Icelab and Jim Whimpey
     </block:DayPagination>
   </block:DayPage>
   {/block:DayPage}
-  
+
   {block:TagPage}
   <!-- Tag Pages -->
   <block:TagPage>
@@ -1070,11 +1083,13 @@ Made by Icelab and Jim Whimpey
     </block:Followed>
   </block:Following>
   {/block:Following}
-  
+
   {block:Likes}
   <!-- Likes -->
   <block:Likes>
     <Likes><![CDATA[{Likes}]]></Likes>
   </block:Likes>
   {/block:Likes}
+
+  <image:Avatar>{image:Avatar}</image:Avatar>
 </data>
