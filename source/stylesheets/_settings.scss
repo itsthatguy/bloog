@@ -113,7 +113,7 @@ $primary-color: $aqua;
 
 // Media Queries
 
-// $small-screen: 768px;
+$small-screen: 830px;
 // $medium-screen: 1280px;
 // $large-screen: 1440px;
 
@@ -137,7 +137,7 @@ $primary-color: $aqua;
 // Grid Variables
 //
 
-// $row-width: emCalc(1000);
+$row-width: emCalc(820);
 // $column-gutter: emCalc(30);
 // $total-columns: 12;
 
@@ -196,7 +196,7 @@ $header-font-color: $black;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
 // $paragraph-font-size: 1em;
-// $paragraph-line-height: 1.6;
+$paragraph-line-height: 1.5;
 // $paragraph-margin-bottom: emCalc(20);
 // $paragraph-aside-font-size: emCalc(14);
 // $paragraph-aside-line-height: 1.35;

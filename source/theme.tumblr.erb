@@ -1,32 +1,49 @@
 {block:tumblrThemr}
+<html>
+<head>
   <link rel="stylesheet" href="/stylesheets/site.css">
+  <style type="text/css"></style>
   <style type="text/css">{CustomCSS}</style>
 
 
-  <script="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <meta name='text:Disqus' content='' />
+  <meta name='text:Twitter' content='' />
+  <meta name='text:Github' content='' />
+  <meta name='text:Dribbble' content='' />
+  <meta name="image:Avatar" content="" />
+  <script type="text/javascript" src="//use.typekit.net/pwn0nhw.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   {block:Description}
   <meta name="description" content="{MetaDescription}" />
   {/block:Description}
-
+</head>
+<body>
   <%= partial "header" %>
 
-  <div class="row">
-    <ol id="posts">
-      {block:Posts}
+  <div class="wrapper">
+    <%= partial "sidebar" %>
+    <div id="main">
+      <div id="main-wrapper" class="row">
+        <ol id="posts">
+          {block:Posts}
 
-      <%= partial "posts/text" %>
-      <%= partial "posts/photo" %>
-      <%= partial "posts/photoset" %>
-      <%= partial "posts/quote" %>
-      <%= partial "posts/link" %>
-      <%= partial "posts/chat" %>
-      <%= partial "posts/video"  %>
-      <%= partial "posts/audio" %>
+          <%= partial "posts/text" %>
+          <%= partial "posts/photo" %>
+          <%= partial "posts/photoset" %>
+          <%= partial "posts/quote" %>
+          <%= partial "posts/link" %>
+          <%= partial "posts/chat" %>
+          <%= partial "posts/video"  %>
+          <%= partial "posts/audio" %>
 
-      {/block:Posts}
-    </ol>
+          {/block:Posts}
+        </ol>
+      </div>
+    </div>
   </div>
 
   <%= partial "footer" %>
-
+</body>
+</html>
 {/block:tumblrThemr}

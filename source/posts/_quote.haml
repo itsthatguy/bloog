@@ -1,9 +1,12 @@
 {block:Quote}
 %li.post-quote
   .post
+    .meta
+      {block:Tags} {Tag} {/block:Tags}
 
-    %blockquote
-      "{Quote}"{block:Source}<cite>{Source}</cite>{/block:Source}
+    .content
+      %blockquote
+        "{Quote}"{block:Source}<cite>{Source}</cite>{/block:Source}
 
     = partial "/posts/post-footer"
 {/block:Quote}
