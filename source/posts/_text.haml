@@ -4,12 +4,13 @@
 
     .meta
       {block:Tags} {Tag} {/block:Tags}
+
     .content
       {block:Title}
       .title
         %h3
           %a{ :href => "{Permalink}" } {Title}
       {/block:Title}
-    {Body}
+      {Body}
     = partial "/posts/post-footer"
 {/block:Text}
