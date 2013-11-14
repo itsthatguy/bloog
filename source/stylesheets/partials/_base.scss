@@ -4,7 +4,7 @@ html {
 
 body {
   min-height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 * { @include text-shadow(none); }
@@ -155,8 +155,7 @@ cite {
     }
     .html_photoset {
       margin-bottom: 1.25em;
-
-      overflow-x: hidden;
+      overflow: hidden;
     }
   }
 }
