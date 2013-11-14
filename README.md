@@ -46,4 +46,6 @@ TumblrThemr is made by [Icelab](http://icelab.com.au/) and [Jim Whimpey](http://
 * [jQuery](http://jquery.com/)
 * [Sammy.js](http://sammyjs.org/)
 * [Handlebars.js](https://github.com/wycats/handlebars.js)
+
+Base HAML template from:
 * [tumblr-theme-base-haml](https://github.com/jenmyers/tumblr-theme-base-haml)
