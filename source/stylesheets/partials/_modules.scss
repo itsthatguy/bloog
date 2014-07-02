@@ -20,9 +20,17 @@
   font-size: emCalc(12);
   font-weight: 600;
   text-transform: uppercase;
-  border-bottom: 1px solid $off-white;
   margin: 0;
   padding: 0 0 2.5em 0;
+  &:after {
+    display: block;
+    content: '';
+    position: relative;
+    width: 70px;
+    height: 1em;
+    border-bottom: 2px solid $off-white;
+    padding-top: 1em;
+  }
   > ul > li {
     @include inline-block;
     margin-right: 1em;
@@ -71,9 +79,6 @@
     @extend blockquote;
     li {
       padding: 0.5em 1em 0.75em;
-
-      // &.odd { background: rgba($light-grey, 0.2); }
-      // &.even { background: rgba($secondary-color, 0.2); }
     }
   }
 }

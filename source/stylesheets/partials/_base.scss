@@ -69,6 +69,7 @@ body {
 
 #footer { padding: 1.25em $column-gutter; }
 
+.full { width: 100%; }
 
 /*******************************************************************************
  *
@@ -83,7 +84,7 @@ body {
     margin: 0;
     top: 0;
     bottom: 0;
-    left: 0;
+    right: 80%;
     width: 20%;
     h1, p { color: $off-black; }
     h1 { margin-top: 0; }
@@ -98,15 +99,17 @@ body {
     position: absolute;
     overflow-x: hidden;
     margin: 0;
-    width: 75%;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 25%;
+    left: 20%;
   }
 }
 
-#main-wrapper { @include grid-row; }
+#main-wrapper {
+  @include grid-row;
+  margin-left: 0;
+}
 
 
 
@@ -117,6 +120,7 @@ body {
  ******************************************************************************/
 #posts {
   @extend %posts;
+
   > li {
     margin-top: 1.5em;
     &.post-quote {
@@ -160,7 +164,6 @@ body {
             content: ',';
             margin-left: -1px;
           }
-          &:first-child:after,
           &:last-child:after { display: none; }
         }
       }
@@ -174,11 +177,11 @@ body {
         @extend %post-footer;
         ul li { vertical-align: top; }
         .date {
-          border-bottom: 1px solid $off-white;
-          padding-bottom: 1em;
-          margin-bottom: 1em;
         }
-        .comment-count { display: block; }
+        .comment-count {
+          @include inline-block;
+          float: right;
+        }
       }
 
 
@@ -188,7 +191,6 @@ body {
 
   }
 }
-
 
 
 

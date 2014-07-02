@@ -1,9 +1,5 @@
 .footer
   %ul
-    %li.date
-      %i.icon-clock
-      %span {TimeAgo}
-    %li.tags= partial "/posts/post-meta"
     {block:IndexPage}
     %li.comment-count
       %i.icon-bubble
@@ -19,5 +15,9 @@
           (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     {/block:IndexPage}
+    %li.date
+      %i.icon-clock
+      %span {TimeAgo}
+    %li.tags= partial "/posts/post-meta"
 
 = partial "/posts/post-comments"
